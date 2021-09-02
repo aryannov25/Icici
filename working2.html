@@ -24,10 +24,74 @@
 </div>
 
 
+<div>
+    <ul class="progress-bar">
+    <li>
+    <li class="stop">
+    <li>
+    <li>
+    <li>
+    </ul>
+</div>
+
+
+
 
 <body style="background-color:  white;">
 
 <style> 
+
+
+
+ul.progress-bar {
+  height: 450px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  margin-left: 135px;
+  margin-top:90px;
+  
+ 
+  width: 20px;
+
+}
+ul.progress-bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 5px;
+  background: #777;
+  width: 5px;
+  height: 100vh;
+}
+ul.progress-bar li {
+  background: green;
+  border-radius: 100px;
+  width: 15px;
+  height: 15px;
+  z-index: 1;
+  position: relative;
+}
+ul.progress-bar li.stop ~ li {
+  background: black;
+}
+ul.progress-bar li.stop ~ li::after {
+  height: 0;
+}
+ul.progress-bar li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+  background: green;
+  width: 5px;
+  height: 100vh;
+}
 
 
 
