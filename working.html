@@ -13,26 +13,25 @@
 
 
 <div class="left">
-  <ul>
-    <div><ul class="progress-bar">
-    <li>
-    <li>
-    <li>
-    <li class="stop">
-    <li>
-</ul></div>
   
     <li class="img"><img src="det.png"></li>
     <li class="img"><img src="of.png"></li> 
     <li class="img"><img src="wall.png"></li>
     <li class="img"><img src="san.png"></li>
     <li class="img"><img src="ud.png"></li>
-
-</ul>
-
-
 </div>
 
+
+
+<div>
+    <ul class="progress-bar">
+    <li class="stop">
+    <li>
+    <li>
+    <li>
+    <li>
+    </ul>
+</div>
 
 
 <body style="background-color:  white;">
@@ -43,18 +42,21 @@
 
 
 ul.progress-bar {
-  height: 300px;
+  height: 450px;
   list-style: none;
   margin: 0;
   padding: 0;
-  position: relative;
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
-  margin-left: 150px;
-  margin-bottom: 50px;
-  margin-top: 50px;
+  margin-left: 135px;
+  margin-top:90px;
+  
+ 
+  width: 20px;
+
 }
 ul.progress-bar::after {
   content: "";
@@ -66,7 +68,7 @@ ul.progress-bar::after {
   height: 100vh;
 }
 ul.progress-bar li {
-  background: #000;
+  background: green;
   border-radius: 100px;
   width: 15px;
   height: 15px;
@@ -74,7 +76,7 @@ ul.progress-bar li {
   position: relative;
 }
 ul.progress-bar li.stop ~ li {
-  background: #777;
+  background: black;
 }
 ul.progress-bar li.stop ~ li::after {
   height: 0;
@@ -84,7 +86,7 @@ ul.progress-bar li::after {
   position: absolute;
   bottom: 0;
   left: 5px;
-  background: #000;
+  background: green;
   width: 5px;
   height: 100vh;
 }
